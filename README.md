@@ -28,6 +28,11 @@ statusView7.config(new StatusConfigBuild()
                 .setTitleColor()  //l标题的颜色
                 .setTitleSize()   //标题的大小
                 
+                //传入自定义view
+                l.setLoadingView(null)  
+                .setEmptyView(null)
+                .setErrorView(null)
+                
                 .addLoadAnim(animView2)) //加载动画传入
                 .showLoadingView();//显示架子啊动画
 
@@ -36,9 +41,5 @@ statusView7.config(new StatusConfigBuild()
         statusView7.showErrorView();//显示错误数据ui
         statusView7.showContentView();//显示原始内容
 
-        // 传入ui的xml文件
-        statusView7.setEmptyResourceId(R.layout.layout_empty);
-        statusView7.setErrorResourceId(R.layout.layout_empty);
-        statusView7.setLoadingResourceId(R.layout.layout_empty);
         
         ```
