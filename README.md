@@ -1,6 +1,6 @@
 # StatusView
 公共加载状态控件
-![image](https://github.com/liuzeze/status/blob/master/gif/GIF.gif)  
+![image](https://github.com/liuzeze/status/blob/master/GIF.gif)  
 
 
 ## 使用方式
