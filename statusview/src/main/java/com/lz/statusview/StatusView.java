@@ -148,12 +148,6 @@ public class StatusView extends FrameLayout {
         mContentView = mCurrentView = contentView;
     }
 
-    public void showLoadingView() {
-        View contentView = getView(mLoadingResourceId);
-        switchView(contentView);
-
-
-    }
 
     private synchronized void switchView(View statuView) {
         if (mCurrentView == statuView) {
@@ -177,6 +171,11 @@ public class StatusView extends FrameLayout {
         }
     }
 
+    public void showLoadingView() {
+        View contentView = getView(mLoadingResourceId);
+        switchView(contentView);
+    }
+
     public void showContentView() {
         switchView(mContentView);
     }
@@ -197,10 +196,6 @@ public class StatusView extends FrameLayout {
         if (view == null) {
             view = LayoutInflater.from(mContext).inflate(resourceId, null);
             views.put(resourceId, view);
-            /*LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT);
-            params.gravity = Gravity.CENTER;
-            view.setLayoutParams(params);*/
 
             StatusViewHolder statusViewHolder = StatusViewHolder.create(view);
             updataView(resourceId, statusViewHolder);
@@ -269,18 +264,31 @@ public class StatusView extends FrameLayout {
         return this;
     }
 
-    public StatusView setLoadingResourceId(@LayoutRes int loadingResourceId) {
-        mLoadingResourceId = loadingResourceId;
+    public StatusView setLoadingView(View loadingView) {
+        if (loadingView == null) {
+            views.remove(mLoadingResourceId);
+            return this;
+        }
+        views.put(mLoadingResourceId, loadingView);
+
         return this;
     }
 
-    public StatusView setErrorResourceId(@LayoutRes int errorResourceId) {
-        mErrorResourceId = errorResourceId;
+    public StatusView setErrorView(View errorView) {
+        if (errorView == null) {
+            views.remove(mErrorResourceId);
+            return this;
+        }
+        views.put(mErrorResourceId, errorView);
         return this;
     }
 
-    public StatusView setEmptyResourceId(@LayoutRes int emptyResourceId) {
-        mEmptyResourceId = emptyResourceId;
+    public StatusView setEmptyView(View emptyView) {
+        if (emptyView == null) {
+            views.remove(mEmptyResourceId);
+            return this;
+        }
+        views.put(mEmptyResourceId, emptyView);
         return this;
     }
 

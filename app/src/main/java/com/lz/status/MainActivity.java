@@ -126,39 +126,13 @@ public class MainActivity extends AppCompatActivity {
         animView2.setTextSize(30);
         statusView7.config(new StatusConfigBuild()
                 .setLoadTitle("加载中")
-                .setShowloadTitle(true)
-                .setShowloadImage(true)
-
-
-                .setErrorImage(0)
-                .setErrorTitle("")
-                .setShowErrorImage(true)
-                .setShowErrorTitle(true)
-                .setErrorRetryListener(null)
-                .setErrorRetryListener(null)
-
-                .setEmptyTitle("")
-                .setEmptyImage(0)
-                .setEmptyRetryListener(null)
-                .setShowEmptyImage(true)
-                .setShowEmptyTitle(true)
-                .setRetryBackGroundRes(0)
-                .setRetryTextColor(0)
-                .setRetryTitle("")
-                .setRetrySize(15)
-                .setShowRetryButton(true)
-
                 .addLoadAnim(animView2))
                 .showLoadingView();
 
 
-        statusView7.showEmptyView();
-        statusView7.showErrorView();
-        statusView7.showContentView();
 
-        statusView7.setEmptyResourceId(R.layout.layout_empty);
-        statusView7.setErrorResourceId(R.layout.layout_empty);
-        statusView7.setLoadingResourceId(R.layout.layout_empty);
+
+
 
     }
 }
