@@ -1,6 +1,9 @@
 # StatusView
 公共加载状态控件
+![image](https://github.com/liuzeze/status/blob/master/gif/GIF.gif)  
 
+
+## 使用方式
 ``` 
 
 statusView7.config(new StatusConfigBuild()
