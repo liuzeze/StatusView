@@ -1,5 +1,7 @@
 # StatusView
 公共加载状态控件
+
+
 ![image](https://github.com/liuzeze/statusView/blob/master/GIF.gif)  
 
 
@@ -32,7 +34,7 @@ statusView7.config(new StatusConfigBuild()
                 .setTitleSize()   //标题的大小
                 
                 //传入自定义view
-                l.setLoadingView(null)  
+                .setLoadingView(null)  
                 .setEmptyView(null)
                 .setErrorView(null)
                 
