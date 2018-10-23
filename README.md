@@ -39,7 +39,7 @@ statusView7.config(new StatusConfigBuild()
                 .setErrorView(null)
                 
                 .addLoadAnim(animView2)) //加载动画传入
-                .showLoadingView();//显示架子啊动画
+                .showLoadingView();//显示加载动画
 
 
         statusView7.showEmptyView();  //显示空数据ui
